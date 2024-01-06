@@ -1,72 +1,109 @@
-/*!
-* Start Bootstrap - Creative v6.0.5 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-(function ($) {
-    "use strict"; // Start of use strict
+document.addEventListener('DOMContentLoaded', () => {
+    let body = document.querySelector('body');
+    const cardsWork = document.querySelectorAll('.card-work')
+    const cardsLearn = document.querySelectorAll('.card-learn')
+    const cardsExperience = document.querySelectorAll('.card-experience')
+    const sections = document.querySelectorAll('section[id]')
+    const imagesLoadding = document.querySelectorAll('.img-loadding')
 
-    // Smooth scrolling using anime.js
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on('click', function () {
-        if (
-            location.pathname.replace(/^\//, "") ==
-            this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length ?
-                target :
-                $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                anime({
-                    targets: 'html, body',
-                    scrollTop: target.offset().top - 72,
-                    duration: 1000,
-                    easing: 'easeInOutExpo'
-                });
-                return false;
+    body.addEventListener('mousemove', (event) => {
+        let pointerMove = document.getElementById('mouse-move')
+
+        positionX = event.clientX - body.getBoundingClientRect().left - (pointerMove.clientWidth / 3)
+        positionY = event.clientY - body.getBoundingClientRect().top - (pointerMove.clientHeight / 3)
+        if (pointerMove) pointerMove.style.transform = `translateX(${positionX - 250}px) translateY(${positionY - 250}px)`;
+    })
+
+    cardsWork.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            console.log('sou o mouse move')
+
+            cardsWork.forEach(cardWork => {
+                cardWork.dataset.workkey != card.dataset.workkey ? cardWork.classList.add('opacit') : cardWork.classList.remove('opacit')
+            })
+        })
+
+        card.addEventListener('mouseout', () => {
+            cardsWork.forEach(cardWork => {
+                cardWork.classList.remove('opacit')
+            })
+        })
+    })
+
+    cardsLearn.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            console.log('sou o mouse move')
+
+            cardsLearn.forEach(cardLearn => {
+                cardLearn.dataset.learnkey != card.dataset.learnkey ? cardLearn.classList.add('opacit') : cardLearn.classList.remove('opacit')
+            })
+        })
+
+        card.addEventListener('mouseout', () => {
+            cardsLearn.forEach(cardLearn => {
+                cardLearn.classList.remove('opacit')
+            })
+        })
+    })
+
+    cardsExperience.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            console.log('sou o mouse move')
+
+            cardsExperience.forEach(cardExperience => {
+                cardExperience.dataset.experiencekey != card.dataset.experiencekey ? cardExperience.classList.add('opacit') : cardExperience.classList.remove('opacit')
+            })
+        })
+
+        card.addEventListener('mouseout', () => {
+            cardsExperience.forEach(cardExperience => {
+                cardExperience.classList.remove('opacit')
+            })
+        })
+    })
+
+    document.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset
+
+        sections.forEach(current =>{
+            const sectionHeight = current.offsetHeight,
+                sectionTop = current.offsetTop - 58,
+                sectionId = current.getAttribute('id')
+
+            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+                document.querySelector('.wrapper__nav__fixed__topo__nav__item__link[href*=' + sectionId + ']').classList.add('active')
+            }else{
+                document.querySelector('.wrapper__nav__fixed__topo__nav__item__link[href*=' + sectionId + ']').classList.remove('active')
             }
-        }
-    });
+        })
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function () {
-        $('.navbar-collapse').collapse('hide');
-    });
+        imagesLoadding.forEach(image => {
+            let posicoes = image.getBoundingClientRect();
+            let inicio = posicoes.top;
+            let fim = posicoes.bottom;
 
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-        target: '#mainNav',
-        offset: 75
-    });
+            if (inicio >= 0 && fim <= window.innerHeight) {
+                if (image.dataset.src) {
+                    image.src = image.dataset.src
+                }
+                image.removeAttribute('data-gif')
+                image.removeAttribute('data-src')
+            }
+        })
+    })
+}) 
 
-    // Collapse Navbar
-    var navbarCollapse = function () {
-        if ($("#mainNav").offset().top > 100) {
-            $("#mainNav").addClass("navbar-scrolled");
+function openImage(gallery, id) {
+    const imgs = document.querySelectorAll(`[data-image]`)
+    console.log(imgs)
+
+    imgs.forEach(img => {
+        if (img.dataset.image === `${gallery+id}`) {
+            img.classList.add('active')
+            img.classList.remove('hidden')
         } else {
-            $("#mainNav").removeClass("navbar-scrolled");
+            img.classList.add('hidden')
+            img.classList.remove('active')
         }
-    };
-    // Collapse now if page is not at top
-    navbarCollapse();
-    // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
-
-    // Magnific popup calls
-    $('#portfolio').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1]
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-        }
-    });
-
-})(jQuery); // End of use strict
+    })
+}
