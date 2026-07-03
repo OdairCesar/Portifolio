@@ -74,12 +74,19 @@
 <div id="cursor-dot"></div>
 <div id="cursor-ring"></div>
 
-<nav class="nav">
-  <a href="#topo" data-cursor-hover="true" class="nav-brand">
-    <span class="nav-mark">OF</span>
-    <span class="nav-name">Odair Ferreira</span>
-  </a>
-  <div class="nav-links">
+<header class="site-header">
+  <nav class="nav">
+    <a href="#topo" data-cursor-hover="true" class="nav-brand">
+      <span class="nav-mark">OF</span>
+      <span class="nav-name">Odair Ferreira</span>
+    </a>
+    <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links" data-cursor-hover="true">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+  </nav>
+  <div id="nav-links" class="nav-links">
     <a href="#sobre" data-cursor-hover="true" class="nav-link">Sobre</a>
     <a href="#skills" data-cursor-hover="true" class="nav-link">Skills</a>
     <a href="#projetos" data-cursor-hover="true" class="nav-link">Projetos</a>
@@ -87,7 +94,8 @@
     <a href="#formacao" data-cursor-hover="true" class="nav-link">Formação</a>
     <a href="#contato" data-cursor-hover="true" data-magnetic="true" class="nav-cta">Contato</a>
   </div>
-</nav>
+</header>
+<div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
 
 <section id="topo"></section>
 <section id="hero-section" class="hero">

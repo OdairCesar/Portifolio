@@ -2,7 +2,7 @@
   "use strict";
 
   /*=============== SCROLL PROGRESS & HEADER ===============*/
-  const nav = document.querySelector(".nav");
+  const siteHeader = document.querySelector(".site-header");
   const progressBar = document.getElementById("scroll-progress");
   const backToTop = document.querySelector(".back-to-top");
 
@@ -17,12 +17,14 @@
       const progress = max > 0 ? top / max : 0;
       const scrolled = top > 30;
 
-      // Solid background on the nav once the page has scrolled a bit
-      nav.classList.toggle("is-scrolled", scrolled);
+      // Solid background on the header once the page has scrolled a bit
+      if (siteHeader) siteHeader.classList.toggle("is-scrolled", scrolled);
       // Same threshold reveals the back-to-top button
       backToTop.classList.toggle("is-visible", scrolled);
       // Amber bar at the very top tracks overall scroll progress
       progressBar.style.width = (Math.round(progress * 1000) / 10) + "%";
+      // Fecha o menu mobile caso o usuário role a página com ele aberto
+      if (document.body.classList.contains("menu-open")) closeMenu();
       ticking = false;
     });
   }
@@ -31,6 +33,37 @@
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  /*=============== MENU MOBILE (HAMBÚRGUER) ===============*/
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const navBackdrop = document.getElementById("nav-backdrop");
+
+  function closeMenu() {
+    document.body.classList.remove("menu-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openMenu() {
+    document.body.classList.add("menu-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "true");
+  }
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      if (document.body.classList.contains("menu-open")) closeMenu();
+      else openMenu();
+    });
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener("click", closeMenu);
+    }
+
+    // Fecha ao clicar em qualquer link/CTA dentro do menu
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  }
 
   /*=============== SCROLL REVEAL (SEÇÕES) ===============*/
   const io = new IntersectionObserver((entries) => {
@@ -91,34 +124,40 @@
     });
   }
 
-  /*=============== TILT DA FOTO NO HERO ===============*/
-  const heroSection = document.getElementById("hero-section");
-  const heroPhoto = document.getElementById("hero-photo-tilt");
-  // Validate if both elements exist
-  if (heroSection && heroPhoto) {
-    heroSection.addEventListener("mousemove", (e) => {
-      const rect = heroSection.getBoundingClientRect();
-      const dx = (e.clientX - (rect.left + rect.width / 2)) / rect.width;
-      const dy = (e.clientY - (rect.top + rect.height / 2)) / rect.height;
-      heroPhoto.style.transform = "rotate(" + (dx * 4) + "deg) translate(" + (dx * 10) + "px, " + (dy * 10) + "px)";
-    });
-    heroSection.addEventListener("mouseleave", () => {
-      heroPhoto.style.transform = "rotate(0deg) translate(0,0)";
+  /*=============== EFEITOS DE MOUSE (SÓ EM PONTEIRO FINO) ===============*/
+  // Tilt da foto e botões magnéticos ficam desativados em telas de celular/touch
+  const hasFinePointer = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
+
+  if (hasFinePointer) {
+    /*=============== TILT DA FOTO NO HERO ===============*/
+    const heroSection = document.getElementById("hero-section");
+    const heroPhoto = document.getElementById("hero-photo-tilt");
+    // Validate if both elements exist
+    if (heroSection && heroPhoto) {
+      heroSection.addEventListener("mousemove", (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        const dx = (e.clientX - (rect.left + rect.width / 2)) / rect.width;
+        const dy = (e.clientY - (rect.top + rect.height / 2)) / rect.height;
+        heroPhoto.style.transform = "rotate(" + (dx * 4) + "deg) translate(" + (dx * 10) + "px, " + (dy * 10) + "px)";
+      });
+      heroSection.addEventListener("mouseleave", () => {
+        heroPhoto.style.transform = "rotate(0deg) translate(0,0)";
+      });
+    }
+
+    /*=============== BOTÕES MAGNÉTICOS ===============*/
+    document.querySelectorAll("[data-magnetic]").forEach((btn) => {
+      btn.addEventListener("mousemove", (e) => {
+        const r = btn.getBoundingClientRect();
+        const dx = e.clientX - (r.left + r.width / 2);
+        const dy = e.clientY - (r.top + r.height / 2);
+        btn.style.transform = "translate(" + (dx * 0.22) + "px, " + (dy * 0.32) + "px)";
+      });
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "translate(0,0)";
+      });
     });
   }
-
-  /*=============== BOTÕES MAGNÉTICOS ===============*/
-  document.querySelectorAll("[data-magnetic]").forEach((btn) => {
-    btn.addEventListener("mousemove", (e) => {
-      const r = btn.getBoundingClientRect();
-      const dx = e.clientX - (r.left + r.width / 2);
-      const dy = e.clientY - (r.top + r.height / 2);
-      btn.style.transform = "translate(" + (dx * 0.22) + "px, " + (dy * 0.32) + "px)";
-    });
-    btn.addEventListener("mouseleave", () => {
-      btn.style.transform = "translate(0,0)";
-    });
-  });
 
   /*=============== SELETOR DE IDIOMA (GOOGLE TRANSLATE) ===============*/
   function currentLang() {
