@@ -5,22 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-        (function () {
-            try {
-                var stored = localStorage.getItem("lang");
-                if (!stored) {
-                    var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || "pt").toLowerCase();
-                    stored = browserLang.indexOf("pt") === 0 ? "pt" : "en";
-                    localStorage.setItem("lang", stored);
-                }
-                if (stored === "en") {
-                    document.cookie = "googtrans=/pt/en;path=/;max-age=31536000";
-                }
-            } catch (e) { }
-        })();
-    </script>
-
     <title>Odair Cesar Ferreira — Desenvolvedor Full-Stack</title>
     <meta name="description"
         content="Desenvolvedor full-stack com experiência em APIs REST, Laravel, Node.js e frameworks JS modernos. Arquitetura de software, e-commerce e apps móveis multiplataforma.">
@@ -539,16 +523,6 @@
         <button type="button" class="lang-btn is-active" data-lang="pt" data-cursor-hover="true">PT</button>
         <button type="button" class="lang-btn" data-lang="en" data-cursor-hover="true">EN</button>
     </div>
-
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                { pageLanguage: "pt", includedLanguages: "pt,en", autoDisplay: false },
-                "google_translate_element"
-            );
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 
     <script src="assets/js/script.js" defer></script>
 </body>
