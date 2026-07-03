@@ -1,482 +1,556 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script>
-  (function () {
-    try {
-      var stored = localStorage.getItem("lang");
-      if (!stored) {
-        var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || "pt").toLowerCase();
-        stored = browserLang.indexOf("pt") === 0 ? "pt" : "en";
-        localStorage.setItem("lang", stored);
-      }
-      if (stored === "en") {
-        document.cookie = "googtrans=/pt/en;path=/;max-age=31536000";
-      }
-    } catch (e) {}
-  })();
-</script>
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem("lang");
+                if (!stored) {
+                    var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || "pt").toLowerCase();
+                    stored = browserLang.indexOf("pt") === 0 ? "pt" : "en";
+                    localStorage.setItem("lang", stored);
+                }
+                if (stored === "en") {
+                    document.cookie = "googtrans=/pt/en;path=/;max-age=31536000";
+                }
+            } catch (e) { }
+        })();
+    </script>
 
-<title>Odair Cesar Ferreira — Desenvolvedor Full-Stack</title>
-<meta name="description" content="Desenvolvedor full-stack com experiência em APIs REST, Laravel, Node.js e frameworks JS modernos. Arquitetura de software, e-commerce e apps móveis multiplataforma.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://odaircesar.github.io/Portifolio/">
+    <title>Odair Cesar Ferreira — Desenvolvedor Full-Stack</title>
+    <meta name="description"
+        content="Desenvolvedor full-stack com experiência em APIs REST, Laravel, Node.js e frameworks JS modernos. Arquitetura de software, e-commerce e apps móveis multiplataforma.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://odaircesar.github.io/Portifolio/">
 
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:url" content="https://odaircesar.github.io/Portifolio/">
-<meta property="og:title" content="Odair Cesar Ferreira — Desenvolvedor Full-Stack">
-<meta property="og:description" content="Desenvolvedor full-stack com experiência em APIs REST, Laravel, Node.js e frameworks JS modernos. Arquitetura de software, e-commerce e apps móveis multiplataforma.">
-<meta property="og:image" content="https://odaircesar.github.io/Portifolio/assets/img/perfil-final2.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://odaircesar.github.io/Portifolio/">
+    <meta property="og:title" content="Odair Cesar Ferreira — Desenvolvedor Full-Stack">
+    <meta property="og:description"
+        content="Desenvolvedor full-stack com experiência em APIs REST, Laravel, Node.js e frameworks JS modernos. Arquitetura de software, e-commerce e apps móveis multiplataforma.">
+    <meta property="og:image" content="https://odaircesar.github.io/Portifolio/assets/img/perfil-final2.png">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Odair Cesar Ferreira — Desenvolvedor Full-Stack">
-<meta name="twitter:description" content="Desenvolvedor full-stack com experiência em APIs REST, Laravel, Node.js e frameworks JS modernos.">
-<meta name="twitter:image" content="https://odaircesar.github.io/Portifolio/assets/img/perfil-final2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Odair Cesar Ferreira — Desenvolvedor Full-Stack">
+    <meta name="twitter:description"
+        content="Desenvolvedor full-stack com experiência em APIs REST, Laravel, Node.js e frameworks JS modernos.">
+    <meta name="twitter:image" content="https://odaircesar.github.io/Portifolio/assets/img/perfil-final2.png">
 
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Odair Cesar Ferreira",
-  "jobTitle": "Desenvolvedor Full-Stack",
-  "url": "https://odaircesar.github.io/Portifolio/",
-  "image": "https://odaircesar.github.io/Portifolio/assets/img/perfil-final2.png",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "NSWEB Soluções TI"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "UNIDERP"
-  },
-  "sameAs": [
-    "https://github.com/OdairCesar",
-    "https://www.linkedin.com/in/odair-cesar-ferreira/"
-  ],
-  "knowsAbout": ["Laravel", "Node.js", "React", "React Native", "Vue.js", "MySQL", "MongoDB", "Redis", "Kafka", "AdonisJS", "TypeScript"]
-}
-</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Odair Cesar Ferreira",
+      "jobTitle": "Desenvolvedor Full-Stack",
+      "url": "https://odaircesar.github.io/Portifolio/",
+      "image": "https://odaircesar.github.io/Portifolio/assets/img/perfil-final2.png",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "NSWEB Soluções TI"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "UNIDERP"
+      },
+      "sameAs": [
+        "https://github.com/OdairCesar",
+        "https://www.linkedin.com/in/odair-cesar-ferreira/"
+      ],
+      "knowsAbout": ["Laravel", "Node.js", "React", "React Native", "Vue.js", "MySQL", "MongoDB", "Redis", "Kafka", "AdonisJS", "TypeScript"]
+    }
+  </script>
 </head>
+
 <body>
 
-<div id="scroll-progress"></div>
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
+    <div id="scroll-progress"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
 
-<header class="site-header">
-  <nav class="nav">
-    <a href="#topo" data-cursor-hover="true" class="nav-brand">
-      <span class="nav-mark">OF</span>
-      <span class="nav-name">Odair Ferreira</span>
-    </a>
-    <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links" data-cursor-hover="true">
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-    </button>
-  </nav>
-  <div id="nav-links" class="nav-links">
-    <a href="#sobre" data-cursor-hover="true" class="nav-link">Sobre</a>
-    <a href="#skills" data-cursor-hover="true" class="nav-link">Skills</a>
-    <a href="#projetos" data-cursor-hover="true" class="nav-link">Projetos</a>
-    <a href="#experiencia" data-cursor-hover="true" class="nav-link">Experiência</a>
-    <a href="#formacao" data-cursor-hover="true" class="nav-link">Formação</a>
-    <a href="#contato" data-cursor-hover="true" data-magnetic="true" class="nav-cta">Contato</a>
-  </div>
-</header>
-<div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
-
-<section id="topo"></section>
-<section id="hero-section" class="hero">
-  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-  <p class="hero-bg-text" aria-hidden="true">Full-Stack</p>
-
-  <div class="hero-inner container">
-  <div class="hero-main">
-    <div class="hero-badge">
-      <span class="hero-badge-dot"></span>
-      Disponível para novos projetos
-    </div>
-
-    <h1 class="hero-title">Odair Cesar</h1>
-    <div class="hero-title-italic">Ferreira</div>
-
-    <div class="hero-role">
-      <span class="hero-role-bar"></span>
-      <span class="hero-role-text">Desenvolvedor Full-Stack</span>
-    </div>
-
-    <p class="hero-desc">
-      Desenvolvimento e manutenção de APIs REST e aplicações web com Laravel, Node.js e frameworks JS modernos. Experiência em arquitetura de software, e-commerce e apps móveis multiplataforma.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#contato" id="btn-primary-hero" data-magnetic="true" data-cursor-hover="true" class="btn-primary">Falar comigo</a>
-      <a href="#projetos" data-magnetic="true" data-cursor-hover="true" class="btn-secondary">Ver projetos</a>
-    </div>
-  </div>
-
-  <div class="hero-photo-col">
-    <div class="hero-photo-frame" aria-hidden="true"></div>
-    <div id="hero-photo-tilt" class="hero-photo-tilt">
-      <img src="assets/img/perfil-final2.png" alt="Odair Cesar Ferreira" class="hero-photo" width="340" height="340">
-    </div>
-  </div>
-  </div>
-
-  <div class="scroll-hint"><span>↓</span></div>
-</section>
-
-<div class="marquee">
-  <div class="marquee-track">
-    <div class="marquee-group">
-      <span>Laravel</span><span>·</span><span>Node.js</span><span>·</span><span>React</span><span>·</span><span>React Native</span><span>·</span><span>Vue.js</span><span>·</span><span>MySQL</span><span>·</span><span>MongoDB</span><span>·</span><span>Redis</span><span>·</span><span>Kafka</span><span>·</span><span>AdonisJS</span><span>·</span><span>TypeScript</span><span>·</span>
-    </div>
-    <div class="marquee-group">
-      <span>Laravel</span><span>·</span><span>Node.js</span><span>·</span><span>React</span><span>·</span><span>React Native</span><span>·</span><span>Vue.js</span><span>·</span><span>MySQL</span><span>·</span><span>MongoDB</span><span>·</span><span>Redis</span><span>·</span><span>Kafka</span><span>·</span><span>AdonisJS</span><span>·</span><span>TypeScript</span><span>·</span>
-    </div>
-  </div>
-</div>
-
-<section id="sobre" data-observe="sobre" class="sobre">
-  <p class="section-number" aria-hidden="true">01</p>
-  <div class="sobre-grid container">
-    <div class="reveal">
-      <div class="section-eyebrow">
-        <span>Sobre mim</span>
-        <span class="section-star">✦</span>
-      </div>
-      <h2 class="section-title">Quem eu sou</h2>
-    </div>
-    <div class="sobre-text reveal">
-      <p>
-        Desenvolvedor full-stack com experiência em desenvolvimento e manutenção de APIs REST utilizando Laravel, Zend Framework, ExpressJS e AdonisJS, além de aplicações web, e-commerce e apps móveis multiplataforma com Angular/Cordova e React Native.
-      </p>
-      <p>
-        Atuo com arquitetura de software e modelagem de sistemas usando UML e padrões de projeto orientados a objetos, modelagem de banco de dados relacional e NoSQL, refatoração e otimização de desempenho, além de processamento assíncrono, cache e arquiteturas orientadas a eventos.
-      </p>
-      <div class="sobre-stats">
-        <div>
-          <div class="sobre-stat-num"><span id="count-years">0+</span></div>
-          <div class="sobre-stat-label">anos de experiência</div>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="#topo" data-cursor-hover="true" class="nav-brand">
+                <span class="nav-mark">OF</span>
+                <span class="nav-name">Odair Ferreira</span>
+            </a>
+            <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav-links" data-cursor-hover="true">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+        </nav>
+        <div id="nav-links" class="nav-links">
+            <a href="#sobre" data-cursor-hover="true" class="nav-link">Sobre</a>
+            <a href="#skills" data-cursor-hover="true" class="nav-link">Skills</a>
+            <a href="#projetos" data-cursor-hover="true" class="nav-link">Projetos</a>
+            <a href="#experiencia" data-cursor-hover="true" class="nav-link">Experiência</a>
+            <a href="#formacao" data-cursor-hover="true" class="nav-link">Formação</a>
+            <a href="#contato" data-cursor-hover="true" data-magnetic="true" class="nav-cta">Contato</a>
         </div>
-        <div>
-          <div class="sobre-stat-num"><span id="count-companies">0</span></div>
-          <div class="sobre-stat-label">empresas</div>
+    </header>
+    <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+    <section id="topo"></section>
+    <section id="hero-section" class="hero">
+        <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+        <p class="hero-bg-text" aria-hidden="true">Full-Stack</p>
+
+        <div class="hero-inner container">
+            <div class="hero-main">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Disponível para novos projetos
+                </div>
+
+                <h1 class="hero-title">Odair Cesar</h1>
+                <div class="hero-title-italic">Ferreira</div>
+
+                <div class="hero-role">
+                    <span class="hero-role-bar"></span>
+                    <span class="hero-role-text">Desenvolvedor Full-Stack</span>
+                </div>
+
+                <p class="hero-desc">
+                    Desenvolvimento e manutenção de APIs REST e aplicações web com Laravel, Node.js e frameworks JS
+                    modernos.
+                    Experiência em arquitetura de software, e-commerce e apps móveis multiplataforma.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contato" id="btn-primary-hero" data-magnetic="true" data-cursor-hover="true"
+                        class="btn-primary">Falar comigo</a>
+                    <a href="#projetos" data-magnetic="true" data-cursor-hover="true" class="btn-secondary">Ver
+                        projetos</a>
+                </div>
+            </div>
+
+            <div class="hero-photo-col">
+                <div class="hero-photo-frame" aria-hidden="true"></div>
+                <div id="hero-photo-tilt" class="hero-photo-tilt">
+                    <img src="assets/img/perfil-final2.png" alt="Odair Cesar Ferreira" class="hero-photo" width="340"
+                        height="340">
+                </div>
+            </div>
         </div>
-        <div>
-          <div class="sobre-stat-num"><span id="count-techs">0+</span></div>
-          <div class="sobre-stat-label">tecnologias dominadas</div>
+
+        <div class="scroll-hint"><span>↓</span></div>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-track">
+            <div class="marquee-group">
+                <span>Laravel</span><span>·</span><span>Node.js</span><span>·</span><span>React</span><span>·</span><span>React
+                    Native</span><span>·</span><span>Vue.js</span><span>·</span><span>MySQL</span><span>·</span><span>MongoDB</span><span>·</span><span>Redis</span><span>·</span><span>Kafka</span><span>·</span><span>AdonisJS</span><span>·</span><span>TypeScript</span><span>·</span>
+            </div>
+            <div class="marquee-group">
+                <span>Laravel</span><span>·</span><span>Node.js</span><span>·</span><span>React</span><span>·</span><span>React
+                    Native</span><span>·</span><span>Vue.js</span><span>·</span><span>MySQL</span><span>·</span><span>MongoDB</span><span>·</span><span>Redis</span><span>·</span><span>Kafka</span><span>·</span><span>AdonisJS</span><span>·</span><span>TypeScript</span><span>·</span>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills" data-observe="skills" class="skills container">
-  <p class="section-number top-flush" aria-hidden="true">02</p>
-  <div class="skills-header reveal">
-    <div class="section-eyebrow">
-      <span>Skills</span>
-      <span class="section-star">✦</span>
-    </div>
-    <h2 class="section-title">Tecnologias e ferramentas</h2>
-  </div>
-  <div class="skills-grid">
-    <div class="skill-card skill-card--blue reveal">
-      <h3>Front-end</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">React Native</span>
-        <span class="skill-tag">Vue.js</span>
-        <span class="skill-tag">Angular</span>
-        <span class="skill-tag">Cordova</span>
-        <span class="skill-tag">Next.js</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Tailwind CSS</span>
-        <span class="skill-tag">Bootstrap</span>
-        <span class="skill-tag">Sass</span>
-        <span class="skill-tag">jQuery</span>
-      </div>
-    </div>
-
-    <div class="skill-card skill-card--amber reveal reveal-delay-1">
-      <h3>Back-end</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">Laravel</span>
-        <span class="skill-tag">Zend Framework</span>
-        <span class="skill-tag">AdonisJS</span>
-        <span class="skill-tag">ExpressJS</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">APIs REST</span>
-        <span class="skill-tag">Redis</span>
-      </div>
-    </div>
-
-    <div class="skill-card skill-card--blue reveal reveal-delay-2">
-      <h3>Dados &amp; infra</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">MySQL</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">Redis</span>
-        <span class="skill-tag">Kafka</span>
-        <span class="skill-tag">Firebase</span>
-        <span class="skill-tag">NoSQL</span>
-      </div>
     </div>
 
-    <div class="skill-card skill-card--amber reveal reveal-delay-3">
-      <h3>Padrões</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">Programação Orientada a Objetos</span>
-        <span class="skill-tag">Model-View-Controller</span>
-        <span class="skill-tag">Modelagem de dados</span>
-        <span class="skill-tag">Event Bus</span>
-        <span class="skill-tag">Event Source</span>
-        <span class="skill-tag">SOLID</span>
-        <span class="skill-tag">SaaS</span>
-        <span class="skill-tag">Clean Architecture</span>
-      </div>
+    <section id="sobre" data-observe="sobre" class="sobre">
+        <p class="section-number" aria-hidden="true">01</p>
+        <div class="sobre-grid container">
+            <div class="reveal">
+                <div class="section-eyebrow">
+                    <span>Sobre mim</span>
+                    <span class="section-star">✦</span>
+                </div>
+                <h2 class="section-title">Quem eu sou</h2>
+            </div>
+            <div class="sobre-text reveal">
+                <p>
+                    Desenvolvedor full-stack com experiência em desenvolvimento e manutenção de APIs REST utilizando
+                    Laravel, Zend
+                    Framework, ExpressJS e AdonisJS, além de aplicações web, e-commerce e apps móveis multiplataforma
+                    com
+                    Angular/Cordova e React Native.
+                </p>
+                <p>
+                    Atuo com arquitetura de software e modelagem de sistemas usando UML e padrões de projeto orientados
+                    a objetos,
+                    modelagem de banco de dados relacional e NoSQL, refatoração e otimização de desempenho, além de
+                    processamento
+                    assíncrono, cache e arquiteturas orientadas a eventos.
+                </p>
+                <div class="sobre-stats">
+                    <div>
+                        <div class="sobre-stat-num"><span id="count-years">0+</span></div>
+                        <div class="sobre-stat-label">anos de experiência</div>
+                    </div>
+                    <div>
+                        <div class="sobre-stat-num"><span id="count-companies">0</span></div>
+                        <div class="sobre-stat-label">empresas</div>
+                    </div>
+                    <div>
+                        <div class="sobre-stat-num"><span id="count-techs">0+</span></div>
+                        <div class="sobre-stat-label">tecnologias dominadas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" data-observe="skills" class="skills container">
+        <p class="section-number top-flush" aria-hidden="true">02</p>
+        <div class="skills-header reveal">
+            <div class="section-eyebrow">
+                <span>Skills</span>
+                <span class="section-star">✦</span>
+            </div>
+            <h2 class="section-title">Tecnologias e ferramentas</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card skill-card--blue reveal">
+                <h3>Front-end</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">Cordova</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Sass</span>
+                    <span class="skill-tag">jQuery</span>
+                </div>
+            </div>
+
+            <div class="skill-card skill-card--amber reveal reveal-delay-1">
+                <h3>Back-end</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Laravel</span>
+                    <span class="skill-tag">Zend Framework</span>
+                    <span class="skill-tag">AdonisJS</span>
+                    <span class="skill-tag">ExpressJS</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">APIs REST</span>
+                    <span class="skill-tag">Redis</span>
+                </div>
+            </div>
+
+            <div class="skill-card skill-card--blue reveal reveal-delay-2">
+                <h3>Dados &amp; infra</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Kafka</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">NoSQL</span>
+                </div>
+            </div>
+
+            <div class="skill-card skill-card--amber reveal reveal-delay-3">
+                <h3>Padrões</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Programação Orientada a Objetos</span>
+                    <span class="skill-tag">Model-View-Controller</span>
+                    <span class="skill-tag">Modelagem de dados</span>
+                    <span class="skill-tag">Event Bus</span>
+                    <span class="skill-tag">Event Source</span>
+                    <span class="skill-tag">SOLID</span>
+                    <span class="skill-tag">SaaS</span>
+                    <span class="skill-tag">Clean Architecture</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <p class="section-number" aria-hidden="true">03</p>
+        <div class="projetos-inner container">
+            <div class="projetos-header">
+                <div class="section-eyebrow">
+                    <span>Projetos</span>
+                    <span class="section-star">✦</span>
+                </div>
+                <h2 class="section-title">Trabalhos selecionados</h2>
+                <p>Uma seleção de sites institucionais e aplicações desenvolvidos na NSWEB e na 2RS Soluções Web.</p>
+            </div>
+
+            <div id="projetos-grid" data-observe="projetos" class="projetos-grid">
+                <a href="#" data-cursor-hover="true" class="project-card reveal">
+                    <div class="project-card-img"><img src="assets/img/cardben-home.webp" alt="Cardben" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Cardben</h3>
+                        <p class="project-card-tag">Aplicativo mobile</p>
+                        <p class="project-card-desc">Gestão de agenda, médicos e cartão de benefícios.</p>
+                    </div>
+                </a>
+                <a href="#" data-cursor-hover="true" class="project-card reveal reveal-delay-1">
+                    <div class="project-card-img"><img src="assets/img/impulsionai-dashboard.png" alt="ImpulsionAI"
+                            loading="lazy"></div>
+                    <div class="project-card-body">
+                        <h3>ImpulsionAI</h3>
+                        <p class="project-card-tag">Dashboard SaaS</p>
+                        <p class="project-card-desc">Criação e gestão de conteúdo com Inteligência Artificial.</p>
+                    </div>
+                </a>
+                <a href="https://afgrupobrasil.com.br/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-2">
+                    <div class="project-card-img"><img src="assets/img/afgrupobrasil.png" alt="AF Grupo Brasil"
+                            loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>AF Grupo Brasil</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Consultoria empresarial, redução de custos e M&amp;A.</p>
+                    </div>
+                </a>
+                <a href="https://habawababrasil.com.br/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-3">
+                    <div class="project-card-img"><img src="assets/img/habawaba.png" alt="HaBaWaBa Brasil"
+                            loading="lazy"></div>
+                    <div class="project-card-body">
+                        <h3>HaBaWaBa Brasil</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Torneio internacional de polo aquático infantojuvenil.</p>
+                    </div>
+                </a>
+                <a href="https://vitoriaregiahotel.com.br/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-4">
+                    <div class="project-card-img"><img src="assets/img/vitoriaregia.png" alt="Vitória Régia Hotel"
+                            loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Vitória Régia Hotel</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Hotelaria, acomodações e reservas online.</p>
+                    </div>
+                </a>
+                <a href="https://zancaner.com.br/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-5">
+                    <div class="project-card-img"><img src="assets/img/zancaner.png" alt="Zancaner Genética Nelore"
+                            loading="lazy"></div>
+                    <div class="project-card-body">
+                        <h3>Zancaner Genética Nelore</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Genética bovina e melhoramento genético na pecuária.</p>
+                    </div>
+                </a>
+                <a href="https://naic.com.br/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal">
+                    <div class="project-card-img"><img src="assets/img/naic.png" alt="NAIC Instituto do Câncer"
+                            loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>NAIC Instituto do Câncer</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Centro de referência em tratamento oncológico.</p>
+                    </div>
+                </a>
+                <a href="https://zincorporacoes.com.br/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-1">
+                    <div class="project-card-img"><img src="assets/img/zincorporacoes.png" alt="Z Incorporações"
+                            loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Z Incorporações</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Incorporadora imobiliária com busca de imóveis.</p>
+                    </div>
+                </a>
+                <a href="https://goldpao.com/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-2">
+                    <div class="project-card-img"><img src="assets/img/goldpao.png" alt="Gold Pão Bakery Solutions"
+                            loading="lazy"></div>
+                    <div class="project-card-body">
+                        <h3>Gold Pão Bakery Solutions</h3>
+                        <p class="project-card-tag">Site institucional multilíngue</p>
+                        <p class="project-card-desc">Soluções para panificação industrial.</p>
+                    </div>
+                </a>
+                <a href="https://imondelli.com/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-3">
+                    <div class="project-card-img"><img src="assets/img/imondelli.png"
+                            alt="Instituto Mondelli de Odontologia" loading="lazy"></div>
+                    <div class="project-card-body">
+                        <h3>Instituto Mondelli</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Pós-graduação e especialização em Odontologia.</p>
+                    </div>
+                </a>
+                <a href="#" data-cursor-hover="true" class="project-card reveal reveal-delay-4">
+                    <div class="project-card-img"><img src="assets/img/gyim-treinos.png" alt="Gyim" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Gyim</h3>
+                        <p class="project-card-tag">Aplicativo mobile</p>
+                        <p class="project-card-desc">Gestão de treinos, dietas e alunos para academias.</p>
+                    </div>
+                </a>
+                <a href="https://zopone.com.br/" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="project-card reveal reveal-delay-5">
+                    <div class="project-card-img"><img src="assets/img/zopone.png" alt="Zopone" loading="lazy"></div>
+                    <div class="project-card-body">
+                        <h3>Zopone Engenharia</h3>
+                        <p class="project-card-tag">Site institucional</p>
+                        <p class="project-card-desc">Engenharia e construção civil desde 1988.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" data-observe="experiencia" class="experiencia">
+        <p class="section-number" aria-hidden="true">04</p>
+        <div class="experiencia-inner container">
+            <div class="experiencia-header reveal">
+                <div class="section-eyebrow">
+                    <span>Experiência</span>
+                    <span class="section-star">✦</span>
+                </div>
+                <h2 class="section-title">Trajetória profissional</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">Nov/2023 — atual</div>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot timeline-dot--active"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Desenvolvedor Full Stack</h3>
+                        <p class="timeline-company">NSWEB Soluções TI</p>
+                        <p class="timeline-desc">Desenvolvimento e manutenção de aplicações web, websites, plataformas
+                            de e-commerce
+                            e soluções corporativas personalizadas. Aplicação de POO, MVC, modularização e processamento
+                            assíncrono
+                            com filas. Participação em decisões de arquitetura e melhoria contínua dos sistemas.</p>
+                        <p class="timeline-stack">Laravel · Zend Framework · Redis · Kafka · MySQL · MongoDB · Firebase
+                            · Node.js ·
+                            Next.js · AdonisJS · React Native · Vue.js · Angular · jQuery · Bootstrap · Tailwind CSS</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-3">
+                    <div class="timeline-date">Abr/2022 — Nov/2023</div>
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Programador Front End</h3>
+                        <p class="timeline-company">2RS Soluções Web</p>
+                        <p class="timeline-desc">Desenvolvimento de websites responsivos a partir de layouts do Figma.
+                            Otimizações
+                            de desempenho e boas práticas de SEO, alcançando altas pontuações no Google Lighthouse.
+                            Colaboração com
+                            designers e desenvolvedores back-end para entregar interfaces modernas e de alta qualidade.
+                        </p>
+                        <p class="timeline-stack">JavaScript · TypeScript · React · Vue.js · Angular · PHP · Zend
+                            Framework ·
+                            Firebase · Sass · Bootstrap · Tailwind CSS · jQuery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacao" data-observe="formacao" class="formacao container">
+        <p class="section-number top-flush" aria-hidden="true">05</p>
+        <div class="formacao-header reveal">
+            <div class="section-eyebrow">
+                <span>Formação</span>
+                <span class="section-star">✦</span>
+            </div>
+            <h2 class="section-title">Educação e certificações</h2>
+        </div>
+        <div class="formacao-grid">
+            <div class="formacao-card formacao-card--blue reveal">
+                <h3>Formação acadêmica</h3>
+                <div>
+                    <p class="formacao-degree">Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
+                    <p class="formacao-meta">UNIDERP · Jan/2020 — Dez/2021</p>
+                    <p class="formacao-desc">Formação em engenharia de software, POO, desenvolvimento web, bancos de
+                        dados,
+                        computação em nuvem, sistemas distribuídos, redes e segurança da informação.</p>
+                </div>
+            </div>
+            <div class="formacao-card formacao-card--amber reveal reveal-delay-1">
+                <h3>Cursos complementares</h3>
+                <div>
+                    <p class="formacao-degree">Web Moderno + ReactJS e React Native</p>
+                    <p class="formacao-meta formacao-meta--gap">Udemy · Leonardo Mourão · Dez/2020 — atual</p>
+                    <p class="formacao-desc formacao-desc--gap">Formação completa em desenvolvimento front-end (com e
+                        sem
+                        frameworks) e evolução para sistemas web e mobile complexos com React, React Native e integração
+                        com
+                        back-end.</p>
+                    <p class="formacao-stack">JavaScript · HTML/CSS · SASS · Bootstrap · jQuery · Webpack · ReactJS ·
+                        React Native
+                        · React Hooks · Redux · Context API · TypeScript · VueJS · Node.js/PHP · MongoDB · MySQL · API
+                        REST</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="contato-blob contato-blob-1" aria-hidden="true"></div>
+        <div class="contato-blob contato-blob-2" aria-hidden="true"></div>
+        <p class="section-number contato-number" aria-hidden="true">06</p>
+
+        <div class="contato-content container">
+            <span class="contato-eyebrow">Contato</span>
+            <h2 class="contato-title">Vamos conversar sobre seu próximo projeto</h2>
+            <p class="contato-desc">
+                Aberto para oportunidades de trabalho, projetos freelance ou uma boa conversa sobre tecnologia.
+            </p>
+            <a href="https://www.linkedin.com/in/odair-cesar-ferreira/" target="_blank" rel="noopener"
+                id="btn-cta-contact" data-magnetic="true" data-cursor-hover="true" class="contato-cta">Entrar em contato
+                pelo LinkedIn</a>
+            <div class="contato-links">
+                <a href="https://github.com/OdairCesar" target="_blank" rel="noopener" data-cursor-hover="true"
+                    class="contato-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/odair-cesar-ferreira/" target="_blank" rel="noopener"
+                    data-cursor-hover="true" class="contato-link">LinkedIn</a>
+            </div>
+            <p class="contato-footer">© 2026 Odair Cesar Ferreira. Todos os direitos reservados.</p>
+        </div>
+    </section>
+
+    <button class="back-to-top" data-cursor-hover="true" aria-label="Voltar ao topo">↑</button>
+
+    <div id="google_translate_element" class="notranslate"></div>
+    <div class="lang-switch notranslate" role="group" aria-label="Selecionar idioma">
+        <button type="button" class="lang-btn is-active" data-lang="pt" data-cursor-hover="true">PT</button>
+        <button type="button" class="lang-btn" data-lang="en" data-cursor-hover="true">EN</button>
     </div>
-  </div>
-</section>
 
-<section id="projetos" class="projetos">
-  <p class="section-number" aria-hidden="true">03</p>
-  <div class="projetos-inner container">
-    <div class="projetos-header">
-      <div class="section-eyebrow">
-        <span>Projetos</span>
-        <span class="section-star">✦</span>
-      </div>
-      <h2 class="section-title">Trabalhos selecionados</h2>
-      <p>Uma seleção de sites institucionais e aplicações desenvolvidos na NSWEB e na 2RS Soluções Web.</p>
-    </div>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: "pt", includedLanguages: "pt,en", autoDisplay: false },
+                "google_translate_element"
+            );
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 
-    <div id="projetos-grid" data-observe="projetos" class="projetos-grid">
-      <a href="#" data-cursor-hover="true" class="project-card reveal">
-        <div class="project-card-img"><img src="assets/img/cardben-home.webp" alt="Cardben" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Cardben</h3>
-          <p class="project-card-tag">Aplicativo mobile</p>
-          <p class="project-card-desc">Gestão de agenda, médicos e cartão de benefícios.</p>
-        </div>
-      </a>
-      <a href="#" data-cursor-hover="true" class="project-card reveal reveal-delay-1">
-        <div class="project-card-img"><img src="assets/img/impulsionai-dashboard.png" alt="ImpulsionAI" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>ImpulsionAI</h3>
-          <p class="project-card-tag">Dashboard SaaS</p>
-          <p class="project-card-desc">Criação e gestão de conteúdo com Inteligência Artificial.</p>
-        </div>
-      </a>
-      <a href="https://afgrupobrasil.com.br/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-2">
-        <div class="project-card-img"><img src="assets/img/afgrupobrasil.png" alt="AF Grupo Brasil" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>AF Grupo Brasil</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Consultoria empresarial, redução de custos e M&amp;A.</p>
-        </div>
-      </a>
-      <a href="https://habawababrasil.com.br/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-3">
-        <div class="project-card-img"><img src="assets/img/habawaba.png" alt="HaBaWaBa Brasil" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>HaBaWaBa Brasil</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Torneio internacional de polo aquático infantojuvenil.</p>
-        </div>
-      </a>
-      <a href="https://vitoriaregiahotel.com.br/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-4">
-        <div class="project-card-img"><img src="assets/img/vitoriaregia.png" alt="Vitória Régia Hotel" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Vitória Régia Hotel</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Hotelaria, acomodações e reservas online.</p>
-        </div>
-      </a>
-      <a href="https://zancaner.com.br/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-5">
-        <div class="project-card-img"><img src="assets/img/zancaner.png" alt="Zancaner Genética Nelore" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Zancaner Genética Nelore</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Genética bovina e melhoramento genético na pecuária.</p>
-        </div>
-      </a>
-      <a href="https://naic.com.br/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal">
-        <div class="project-card-img"><img src="assets/img/naic.png" alt="NAIC Instituto do Câncer" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>NAIC Instituto do Câncer</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Centro de referência em tratamento oncológico.</p>
-        </div>
-      </a>
-      <a href="https://zincorporacoes.com.br/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-1">
-        <div class="project-card-img"><img src="assets/img/zincorporacoes.png" alt="Z Incorporações" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Z Incorporações</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Incorporadora imobiliária com busca de imóveis.</p>
-        </div>
-      </a>
-      <a href="https://goldpao.com/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-2">
-        <div class="project-card-img"><img src="assets/img/goldpao.png" alt="Gold Pão Bakery Solutions" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Gold Pão Bakery Solutions</h3>
-          <p class="project-card-tag">Site institucional multilíngue</p>
-          <p class="project-card-desc">Soluções para panificação industrial.</p>
-        </div>
-      </a>
-      <a href="https://imondelli.com/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-3">
-        <div class="project-card-img"><img src="assets/img/imondelli.png" alt="Instituto Mondelli de Odontologia" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Instituto Mondelli</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Pós-graduação e especialização em Odontologia.</p>
-        </div>
-      </a>
-      <a href="#" data-cursor-hover="true" class="project-card reveal reveal-delay-4">
-        <div class="project-card-img"><img src="assets/img/gyim-treinos.png" alt="Gyim" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Gyim</h3>
-          <p class="project-card-tag">Aplicativo mobile</p>
-          <p class="project-card-desc">Gestão de treinos, dietas e alunos para academias.</p>
-        </div>
-      </a>
-      <a href="https://zopone.com.br/" target="_blank" rel="noopener" data-cursor-hover="true" class="project-card reveal reveal-delay-5">
-        <div class="project-card-img"><img src="assets/img/zopone.png" alt="Zopone" loading="lazy"></div>
-        <div class="project-card-body">
-          <h3>Zopone Engenharia</h3>
-          <p class="project-card-tag">Site institucional</p>
-          <p class="project-card-desc">Engenharia e construção civil desde 1988.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="experiencia" data-observe="experiencia" class="experiencia">
-  <p class="section-number" aria-hidden="true">04</p>
-  <div class="experiencia-inner container">
-    <div class="experiencia-header reveal">
-      <div class="section-eyebrow">
-        <span>Experiência</span>
-        <span class="section-star">✦</span>
-      </div>
-      <h2 class="section-title">Trajetória profissional</h2>
-    </div>
-
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-date">Nov/2023 — atual</div>
-        <div class="timeline-marker">
-          <div class="timeline-dot timeline-dot--active"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="timeline-content">
-          <h3>Desenvolvedor Full Stack</h3>
-          <p class="timeline-company">NSWEB Soluções TI</p>
-          <p class="timeline-desc">Desenvolvimento e manutenção de aplicações web, websites, plataformas de e-commerce e soluções corporativas personalizadas. Aplicação de POO, MVC, modularização e processamento assíncrono com filas. Participação em decisões de arquitetura e melhoria contínua dos sistemas.</p>
-          <p class="timeline-stack">Laravel · Zend Framework · Redis · Kafka · MySQL · MongoDB · Firebase · Node.js · Next.js · AdonisJS · React Native · Vue.js · Angular · jQuery · Bootstrap · Tailwind CSS</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal reveal-delay-3">
-        <div class="timeline-date">Abr/2022 — Nov/2023</div>
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-        </div>
-        <div class="timeline-content">
-          <h3>Programador Front End</h3>
-          <p class="timeline-company">2RS Soluções Web</p>
-          <p class="timeline-desc">Desenvolvimento de websites responsivos a partir de layouts do Figma. Otimizações de desempenho e boas práticas de SEO, alcançando altas pontuações no Google Lighthouse. Colaboração com designers e desenvolvedores back-end para entregar interfaces modernas e de alta qualidade.</p>
-          <p class="timeline-stack">JavaScript · TypeScript · React · Vue.js · Angular · PHP · Zend Framework · Firebase · Sass · Bootstrap · Tailwind CSS · jQuery</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="formacao" data-observe="formacao" class="formacao container">
-  <p class="section-number top-flush" aria-hidden="true">05</p>
-  <div class="formacao-header reveal">
-    <div class="section-eyebrow">
-      <span>Formação</span>
-      <span class="section-star">✦</span>
-    </div>
-    <h2 class="section-title">Educação e certificações</h2>
-  </div>
-  <div class="formacao-grid">
-    <div class="formacao-card formacao-card--blue reveal">
-      <h3>Formação acadêmica</h3>
-      <div>
-        <p class="formacao-degree">Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
-        <p class="formacao-meta">UNIDERP · Jan/2020 — Dez/2021</p>
-        <p class="formacao-desc">Formação em engenharia de software, POO, desenvolvimento web, bancos de dados, computação em nuvem, sistemas distribuídos, redes e segurança da informação.</p>
-      </div>
-    </div>
-    <div class="formacao-card formacao-card--amber reveal reveal-delay-1">
-      <h3>Cursos complementares</h3>
-      <div>
-        <p class="formacao-degree">Web Moderno + ReactJS e React Native</p>
-        <p class="formacao-meta formacao-meta--gap">Udemy · Leonardo Mourão · Dez/2020 — atual</p>
-        <p class="formacao-desc formacao-desc--gap">Formação completa em desenvolvimento front-end (com e sem frameworks) e evolução para sistemas web e mobile complexos com React, React Native e integração com back-end.</p>
-        <p class="formacao-stack">JavaScript · HTML/CSS · SASS · Bootstrap · jQuery · Webpack · ReactJS · React Native · React Hooks · Redux · Context API · TypeScript · VueJS · Node.js/PHP · MongoDB · MySQL · API REST</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contato" class="contato">
-  <div class="contato-blob contato-blob-1" aria-hidden="true"></div>
-  <div class="contato-blob contato-blob-2" aria-hidden="true"></div>
-  <p class="section-number contato-number" aria-hidden="true">06</p>
-
-  <div class="contato-content container">
-    <span class="contato-eyebrow">Contato</span>
-    <h2 class="contato-title">Vamos conversar sobre seu próximo projeto</h2>
-    <p class="contato-desc">
-      Aberto para oportunidades de trabalho, projetos freelance ou uma boa conversa sobre tecnologia.
-    </p>
-    <a href="https://www.linkedin.com/in/odair-cesar-ferreira/" target="_blank" rel="noopener" id="btn-cta-contact" data-magnetic="true" data-cursor-hover="true" class="contato-cta">Entrar em contato pelo LinkedIn</a>
-    <div class="contato-links">
-      <a href="https://github.com/OdairCesar" target="_blank" rel="noopener" data-cursor-hover="true" class="contato-link">GitHub</a>
-      <a href="https://www.linkedin.com/in/odair-cesar-ferreira/" target="_blank" rel="noopener" data-cursor-hover="true" class="contato-link">LinkedIn</a>
-    </div>
-    <p class="contato-footer">© 2026 Odair Cesar Ferreira. Todos os direitos reservados.</p>
-  </div>
-</section>
-
-<button class="back-to-top" data-cursor-hover="true" aria-label="Voltar ao topo">↑</button>
-
-<div id="google_translate_element" class="notranslate"></div>
-<div class="lang-switch notranslate" role="group" aria-label="Selecionar idioma">
-  <button type="button" class="lang-btn is-active" data-lang="pt" data-cursor-hover="true">PT</button>
-  <button type="button" class="lang-btn" data-lang="en" data-cursor-hover="true">EN</button>
-</div>
-
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      { pageLanguage: "pt", includedLanguages: "pt,en", autoDisplay: false },
-      "google_translate_element"
-    );
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
-
-<script src="assets/js/script.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
+
 </html>
