@@ -84,7 +84,7 @@
   function startCounters() {
     if (countersDone.value) return;
     countersDone.value = true;
-    const targets = { years: 3, companies: 2, techs: 10 };
+    const targets = { years: 4, companies: 2, techs: 10 };
     const els = {
       years: document.getElementById("count-years"),
       companies: document.getElementById("count-companies"),
